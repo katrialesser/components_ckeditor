@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Allows plugins on CKEditor.
+ */
+
+/**
+ * Implements hook__ckeditor_plugin_info_alter().
+ */
+function university_ckeditor_ckeditor_plugin_info_alter(array &$plugins) {
+
+  $plugins['dialog'] = array(
+    'id' => 'dialog',
+    'label' => t('Dialog'),
+    'module' => 'university_ckeditor',
+    'class' => 'Drupal\university_ckeditor\Plugin\CKEditorPlugin\Dialog',
+    'provider' => 'university_ckeditor',
+  );
+
+  $plugins['fakeobjects'] = array(
+    'id' => 'fakeobjects',
+    'label' => t('Fakeobjects'),
+    'module' => 'university_ckeditor',
+    'class' => 'Drupal\university_ckeditor\Plugin\CKEditorPlugin\Fakeobjects',
+    'provider' => 'university_ckeditor',
+  );
+
+  $plugins['iframe'] = array(
+    'id' => 'iframe',
+    'label' => t('Iframe'),
+    'module' => 'university_ckeditor',
+    'class' => 'Drupal\university_ckeditor\Plugin\CKEditorPlugin\Iframe',
+    'provider' => 'university_ckeditor',
+  );
+}

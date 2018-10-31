@@ -1,0 +1,6 @@
+name: 'University CKeditor'
+type: module
+description: 'This module extend the functionality for CKEditor'
+package: University
+version: '8.x-1.0'
+core: '8.x'
